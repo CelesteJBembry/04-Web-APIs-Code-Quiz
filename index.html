@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web APIs: Code Quiz</title>
+</head>
+<body>
+    <div class="container">
+        <row>
+            <h5 class="time"></h5>
+            <div id="countdown"></div>
+        </row>
+    <form>
+      <h1>Coding Quiz Challenge</h1>
+      <h3>Try to answer the following code-related question within the time limit. 
+          Keep in mind that incorrect answers will penalize your score/time by ten seconds!</h3>
+    <div >
+        <h2 class="timer" id="timer"></h2>
+        <p id="name"></p>
+    </div>
+    <button id="startQuiz" class="startQuiz">Start Quiz</button>
+    </form>
+
+
+
+
+    <script type="text/javascript">
+//Start
+//var time =60
+//var x=setInterval(function(){
+//    document.getElementById(".timer").innerHTML=" "+time +" seconds";
+//    time=time-1;
+
+//    if(time < 0) {
+//       clearInterval(x);
+//       document.getElementById(".startQuiz").innerHTML="get link";}}, 1000);function()
+
+
+//Start2
+//var timeElapsed = document.querySelector(".timer");
+//var countdown = document.createElement("div");
+//var secondsLeft = 60;
+
+//function setTimer() {
+    //var timerInt =setInterval(
+       // function(){
+            //secondsLeft--; timeElapsed.textContent = secondsLeft + "seconds";
+           
+
+        //if (secondsLeft === 0) {clearInterval(timerInt);sendMessage(); }}, 1000);}
+//function append() {
+ //   timeElapsed.textContent = " ";
+    //countdown.appendChild(imgEl)}setTimer();
+
+
+
+//Questions
+var questions = [
+    {
+        prompt : "Commonly used data types DO NOT include:\n(A) Strings\n(B) Booleans\n(C) Alerts\n(D) Numbers",
+        answer : "c"
+
+    },{
+        prompt : "The condition in an if/else statement is enclosed within ___.\n(A) Quotes\n(B) Curly Brackets\n(C) Parentheses\n(D) Square Brackets",
+        answer : "b"
+    },{
+        prompt : "Arrays in JavaScript can be used to store ____.\n(A) Numbers & Strings\n(B) Booleans\n(C) Other Arrays\n(D) All of the above",
+        answer : "d"
+    },{
+        prompt : "String values must be enclosed within ___ when being assigned to variables.\n(A) Quotes\n(B) Curly Brackets\n(C) Parentheses\n(D) Commas",
+        answer : "a"
+    },{
+        prompt : "A very useful tool used during development and debugging for printing content to the debugger is:\n(A) JavaScript\n(B) Terminal/Bash\n(C) For Loops\n(D) Console Log",
+        answer : "d"
+    }
+]
+var score = 0;
+for (var i = 0; i < questions.length; i++ ) {   
+    var response = window.prompt(questions[i].prompt)
+    var clean = response.toLowerCase();
+if(response == questions[i].answer) {
+    score++;
+    alert("Correct!");
+} else {
+    alert ("Wrong!");
+}
+}
+//function name() {
+//  var name = prompt("Please enter your name", "");
+ // if (name != null) {
+ //   document.getElementById("name").innerHTML =
+ //   "Hello" + name + "You got " + score + "out of " + questions.length;}}
+alert ("You got " + score + " out of " + questions.length);
+
+
+//var Answer = questions.answer
+//var score = 0
+
+//$(".button").on("click", function() {
+//for (var i = 0; i < questions.length; i++ ) {
+
+//    var response = window.attr(questions[i])
+
+//if(response ==questions[i].answer) {
+//    score++
+//    alert("Correct!");
+//    valueBtn.text($(this).attr("value"))
+// $("#first-number").append(valueBtn)} else {alert ("Wrong!");}}alert ("You got " + score);}); 
+
+//eventListener
+//var count = 0;
+//var incrementEl = document.querySelector("#increment");
+//var decrementEl = document.querySelector("#decrement");
+//var countEl = document.querySelector("#count");
+
+//function setCounterText() {
+//  countEl.textContent = count;}
+
+
+</script>
+</body>
+</html>
+
